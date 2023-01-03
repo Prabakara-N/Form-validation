@@ -49,12 +49,14 @@ const validateInputs = () => {
   const password = passwordEl.value.trim();
   const confirmPassword = confirmPasswordEl.value.trim();
 
+  // username
   if (username === "") {
     setError(usernameEl, "Username is required");
   } else {
     setSuccess(usernameEl);
   }
 
+  // email
   if (email === "") {
     setError(emailEl, "Email is required");
   } else if (!isValidEmail(email)) {
@@ -63,6 +65,7 @@ const validateInputs = () => {
     setSuccess(emailEl);
   }
 
+  // password
   if (password === "") {
     setError(passwordEl, "Password is required");
   } else if (password.length < 8) {
@@ -71,8 +74,11 @@ const validateInputs = () => {
     setSuccess(passwordEl);
   }
 
+  // confirm password
   if (confirmPassword === "") {
     setError(confirmPasswordEl, "Please confirm your password");
+  } else if (confirmPassword.length < 8) {
+    setError(confirmPasswordEl, "Password must be at least 8 character.");
   } else if (confirmPassword !== password) {
     setError(confirmPasswordEl, "Passwords doesn't match");
   } else {
