@@ -63,12 +63,15 @@ body {
     rgba(246, 191, 13, 1) 0%,
     rgba(249, 47, 47, 1) 90%
   );
+  background-image: url(../images/massimo-adami-n3d10l6_DfY-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
   border-radius: 10px;
   font-size: 12px;
 }
 
 h1 {
-  color: #fff;
+  color: #f08700;
   text-align: center;
 }
 
@@ -96,7 +99,7 @@ h1 {
 label {
   margin-bottom: 3px;
   font-weight: 500;
-  color: #03256c;
+  color: #f08700;
   font-size: 0.85rem;
 }
 
